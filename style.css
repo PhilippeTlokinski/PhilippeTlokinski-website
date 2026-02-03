@@ -1,1 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
+:root {
+  --dark: #1f2933;
+  --navy: #243447;
+  --metal: #3a3f45;
+  --light: #ffffff;
+  --accent: #b11226;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* HOME SPLIT */
+.split {
+  display: flex;
+  height: 100vh;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.actor-panel {
+  background: linear-gradient(135deg, var(--navy), var(--metal));
+  color: white;
+}
+
+.magician-panel {
+  background: white;
+  color: var(--dark);
+}
+
+.content h1 {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 32px;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transition: 0.3s ease;
+}
+
+.btn-dark {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-dark:hover {
+  background: white;
+  color: var(--navy);
+}
+
+.btn-light {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-light:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--navy);
+  color: white;
+}
+
+.topbar.light {
+  background: white;
+  color: var(--dark);
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, var(--navy), var(--metal));
+  color: white;
+}
+
+.light-hero {
+  background: white;
+  color: var(--dark);
+  border-bottom: 4px solid var(--accent);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 40px;
+  max-width: 800px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+a {
+  color: var(--accent);
+}
