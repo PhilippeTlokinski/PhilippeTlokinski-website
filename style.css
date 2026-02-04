@@ -158,3 +158,24 @@ nav a {
 a {
   color: var(--accent);
 }
+/* ACTOR PAGE */
+body.actor-page {
+  background: linear-gradient(135deg, var(--navy), var(--metal));
+  color: white;
+}
+
+body.actor-page .section {
+  color: white;
+}
+
+/* MAGICIAN PAGE */
+body.magician-page {
+  background: white;
+  color: var(--dark);
+}
+
+body.magician-page .topbar {
+  background: white;
+  color: var(--dark);
+  border-bottom: 1px solid #eee;
+}
