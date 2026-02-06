@@ -241,3 +241,22 @@ body.magician-page .topbar {
   display: flex;
   align-items: flex-end;
 }
+.actor-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0)
+  );
+}
+.actor-hero {
+  position: relative;
+}
+
+.actor-hero .hero-text {
+  position: relative;
+  z-index: 1;
+}
