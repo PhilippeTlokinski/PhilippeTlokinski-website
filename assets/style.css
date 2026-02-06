@@ -233,3 +233,11 @@ body.magician-page .topbar {
   height: 100%;
   border: 0;
 }
+.actor-hero {
+  background-image: url("/assets/images/actor-hero.jpg");
+  background-size: cover;
+  background-position: center top;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
