@@ -22,6 +22,7 @@ body {
 /* HOME SPLIT */
 .split {
   display: flex;
+  flex-direction: row;
   height: 100vh;
 }
 
@@ -31,16 +32,31 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 
+/* ACTOR HERO */
 .actor-panel {
-  background: linear-gradient(135deg, var(--navy), var(--metal));
+  background: linear-gradient(rgba(36,52,71,0.6), rgba(36,52,71,0.6)), url('/assets/actor-hero.jpg') center/cover no-repeat;
   color: white;
 }
 
+/* MAGICIAN HERO */
 .magician-panel {
-  background: white;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('/assets/magician-hero.jpg') center/cover no-repeat;
   color: var(--dark);
+}
+
+/* Overlay na mobile (opcjonalne) */
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel {
+    height: 50vh;
+  }
 }
 
 .content h1 {
