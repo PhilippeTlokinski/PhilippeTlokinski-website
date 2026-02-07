@@ -279,26 +279,26 @@ body.magician-page .topbar {
 
 .site-note {
   position: fixed;
-  top: 50%;
+  top: 30%; /* <--- lekko wyżej niż centrum */
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
-  padding: 14px 22px;
-  border-radius: 10px;
-  font-size: 14px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 15px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   z-index: 9999;
 
-  /* KLUCZOWE */
-  pointer-events: none; /* ← NIE BLOKUJE STRONY */
+  /* KLUCZOWE: NIE BLOKUJE STRONY */
+  pointer-events: none;
   backdrop-filter: blur(4px);
 }
 
 .site-note__icon {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .site-note__text {
