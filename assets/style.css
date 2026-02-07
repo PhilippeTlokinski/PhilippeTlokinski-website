@@ -276,3 +276,38 @@ body.magician-page .topbar {
   position: relative;
   z-index: 1;
 }
+
+.site-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.site-overlay__content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 12px;
+  max-width: 420px;
+  font-family: inherit;
+}
+
+.site-overlay__content h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.site-overlay__content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.warning-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
