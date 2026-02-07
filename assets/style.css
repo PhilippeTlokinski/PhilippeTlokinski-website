@@ -277,37 +277,30 @@ body.magician-page .topbar {
   z-index: 1;
 }
 
-.site-overlay {
+.site-note {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 14px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  gap: 10px;
+  z-index: 9999;
+
+  /* KLUCZOWE */
+  pointer-events: none; /* ← NIE BLOKUJE STRONY */
+  backdrop-filter: blur(4px);
 }
 
-.site-overlay__content {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px 50px;
-  border-radius: 12px;
-  max-width: 420px;
-  font-family: inherit;
+.site-note__icon {
+  font-size: 18px;
 }
 
-.site-overlay__content h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.site-overlay__content p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-}
-
-.warning-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
+.site-note__text {
+  white-space: nowrap;
 }
