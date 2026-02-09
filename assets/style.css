@@ -34,13 +34,22 @@ body {
 }
 
 .actor-panel {
-  background: linear-gradient(135deg, var(--navy), var(--metal));
-  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--navy),
+    var(--metal)
+  );
 }
 
-.magician-panel {
-  background: white;
-  color: var(--dark);
+.actor-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255,255,255,0.04),
+    transparent 60%
+  );
 }
 
 .content h1 {
