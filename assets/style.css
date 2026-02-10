@@ -303,6 +303,18 @@ nav a {
   border: 0;
 }
 
+/* REPRESENTATION – actor page */
+
+body.actor-page .representation {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 80px;
+  padding-top: 40px;
+}
+
+body.actor-page .representation li {
+  letter-spacing: 0.05em;
+}
+
 /* =========================================================
    SITE NOTE
 ========================================================= */
