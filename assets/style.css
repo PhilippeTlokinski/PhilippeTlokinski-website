@@ -8,38 +8,57 @@
   --accent: #b11226;
 }
 
-/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* BODY – NEUTRALNY */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background: var(--light); /* ← ZMIANA */
-  color: var(--dark);       /* ← ZMIANA */
+  background: var(--light);
+  color: var(--dark);
 }
 
-/* PAGE CONTEXT */
+/* =========================================================
+   PAGE WRAPPERS (KLUCZOWE)
+========================================================= */
+
 .page {
   min-height: 100vh;
 }
 
-/* PAGE VARIANTS */
+/* ---------- ACTOR ---------- */
+
 .page--actor {
   background: linear-gradient(135deg, var(--navy), var(--metal));
   color: white;
 }
+
+.page--actor a {
+  color: white;
+}
+
+.page--actor .section {
+  color: white;
+}
+
+/* ---------- MAGICIAN ---------- */
 
 .page--magician {
   background: white;
   color: var(--dark);
 }
 
-/* HOME SPLIT */
+.page--magician a {
+  color: var(--accent);
+}
+
+/* =========================================================
+   HOME SPLIT
+========================================================= */
+
 .split {
   display: flex;
   height: 100vh;
@@ -75,7 +94,10 @@ body {
   font-size: 0.8rem;
 }
 
-/* BUTTONS */
+/* =========================================================
+   BUTTONS
+========================================================= */
+
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -107,16 +129,20 @@ body {
   color: white;
 }
 
-/* TOPBAR */
+/* =========================================================
+   TOPBAR
+========================================================= */
+
 .topbar {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
+  position: relative;
+  z-index: 10;
 }
 
-/* topbar reaguje na page */
 .page--actor .topbar {
-  background: var(--navy);
+  background: transparent;
   color: white;
 }
 
@@ -141,27 +167,60 @@ nav a {
   letter-spacing: 0.2em;
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero {
   padding: 100px 40px;
-}
-
-.page--actor .hero {
-  background: linear-gradient(135deg, var(--navy), var(--metal));
-  color: white;
-}
-
-.page--magician .hero {
-  background: white;
-  color: var(--dark);
-  border-bottom: 4px solid var(--accent);
 }
 
 .hero-text {
   max-width: 600px;
 }
 
-/* SECTIONS */
+/* ---------- ACTOR HERO ---------- */
+
+.actor-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: url("/assets/images/actor-hero.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+
+.actor-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0)
+  );
+}
+
+.actor-hero .hero-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/* ---------- MAGICIAN HERO ---------- */
+
+.light-hero {
+  background: white;
+  color: var(--dark);
+  border-bottom: 4px solid var(--accent);
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
 .section {
   padding: 80px 40px;
   max-width: 800px;
@@ -174,21 +233,10 @@ nav a {
   font-size: 0.9rem;
 }
 
-/* LISTS */
-.list {
-  list-style: none;
-}
+/* =========================================================
+   MEDIA
+========================================================= */
 
-.list li {
-  margin-bottom: 10px;
-}
-
-/* LINKS */
-a {
-  color: var(--accent);
-}
-
-/* MEDIA SECTION */
 .media-group {
   margin-bottom: 60px;
 }
@@ -214,6 +262,7 @@ a {
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 900px) {
   .grid img {
     width: calc(50% - 10px);
@@ -226,7 +275,10 @@ a {
   }
 }
 
-/* VIDEO */
+/* =========================================================
+   VIDEO
+========================================================= */
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -242,35 +294,10 @@ a {
   border: 0;
 }
 
-/* ACTOR HERO IMAGE */
-.actor-hero {
-  position: relative;
-  background-image: url("/assets/images/actor-hero.jpg");
-  background-size: cover;
-  background-position: center top;
-  min-height: 100vh;
-  display: flex;
-  align-items: flex-end;
-}
+/* =========================================================
+   SITE NOTE
+========================================================= */
 
-.actor-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0)
-  );
-}
-
-.actor-hero .hero-text {
-  position: relative;
-  z-index: 1;
-}
-
-/* SITE NOTE */
 .site-note {
   position: fixed;
   top: 30%;
