@@ -33,6 +33,44 @@ body {
   min-height: 100vh;
 }
 
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.page--actor .topbar {
+  background: transparent;
+  color: white;
+}
+
+.page--magician .topbar {
+  background: white;
+  color: var(--dark);
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
 /* ---------- ACTOR ---------- */
 
 .page--actor {
@@ -92,44 +130,6 @@ body {
 .btn-light:hover {
   background: var(--accent);
   color: white;
-}
-
-/* =========================================================
-   TOPBAR
-========================================================= */
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  position: relative;
-  z-index: 10;
-}
-
-.page--actor .topbar {
-  background: transparent;
-  color: white;
-}
-
-.page--magician .topbar {
-  background: white;
-  color: var(--dark);
-  border-bottom: 1px solid #eee;
-}
-
-.logo {
-  text-decoration: none;
-  color: inherit;
-  letter-spacing: 0.2em;
-  font-size: 0.8rem;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
 }
 
 /* =========================================================
@@ -278,34 +278,4 @@ body.actor-page .representation {
 
 body.actor-page .representation li {
   letter-spacing: 0.05em;
-}
-
-/* =========================================================
-   SITE NOTE
-========================================================= */
-
-.site-note {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  padding: 16px 24px;
-  border-radius: 12px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  z-index: 9999;
-  pointer-events: none;
-  backdrop-filter: blur(4px);
-}
-
-.site-note__icon {
-  font-size: 20px;
-}
-
-.site-note__text {
-  white-space: nowrap;
 }
