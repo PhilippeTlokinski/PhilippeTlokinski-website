@@ -270,14 +270,15 @@ nav a {
   border: 0;
 }
 
-/* REPRESENTATION – actor page */
+/* =========================================================
+   REPRESENTATION
+========================================================= */
 
-body.actor-page .representation {
-  border-top: 1px solid rgba(255,255,255,0.15);
-  margin-top: 80px;
-  padding-top: 40px;
+.representation ul {
+  list-style: none;
 }
 
-body.actor-page .representation li {
+.representation li {
+  margin-bottom: 10px;
   letter-spacing: 0.05em;
 }
