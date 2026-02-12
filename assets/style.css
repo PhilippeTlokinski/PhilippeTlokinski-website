@@ -214,34 +214,6 @@ main {
 }
 
 /* =========================================================
-   MEDIA
-========================================================= */
-
-.media-group {
-  margin-bottom: 60px;
-}
-
-.media-group h3 {
-  margin-bottom: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.85rem;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.grid img {
-  width: calc(33% - 13.33px);
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* =========================================================
    RESPONSIVE
 ========================================================= */
 
@@ -342,6 +314,22 @@ main {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* =========================================================
+   MEDIA GRID
+========================================================= */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid img {
+  width: calc(33.333% - 14px);
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 /* =========================================================
