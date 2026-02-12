@@ -250,7 +250,7 @@ nav a {
 }
 
 /* =========================================================
-   VIDEO
+   SHOWREEL
 ========================================================= */
 
 .video-wrapper {
@@ -258,6 +258,8 @@ nav a {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .video-wrapper iframe {
