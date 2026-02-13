@@ -1,164 +1,253 @@
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --dark: #1f2933;
+  --navy: #1c2733;
+  --metal: #3a3f45;
+  --light: #ffffff;
+  --accent: #b11226;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background: #ffffff;
-  color: #111;
+html {
+  scroll-behavior: smooth;
 }
 
-/* TOP BAR */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= TOPBAR ================= */
 
 .topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
-  background: #0f2c44;
+  z-index: 1000;
+}
+
+.page--actor .topbar {
+  background: var(--navy);
+}
+
+.page--magician .topbar {
+  background: white;
+  border-bottom: 1px solid #eee;
 }
 
 .topbar a {
-  color: #ffffff;
   text-decoration: none;
-  margin-right: 18px;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  margin-left: 25px;
 }
 
-.topbar a:hover {
-  opacity: 0.7;
+.page--actor .topbar a {
+  color: white;
 }
 
-.topbar-nav a:last-child {
-  margin-right: 0;
+.page--magician .topbar a {
+  color: var(--dark);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
-  height: 85vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+  padding: 140px 40px 80px;
 }
 
-.page--actor .hero {
-  background-image: url('/assets/actor-hero.jpg');
+.actor-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("/assets/images/actor-hero.jpg") center/cover no-repeat;
+  color: white;
 }
 
-.page--magician .hero {
-  background-image: url('/assets/magician-hero.jpg');
-}
-
-/* REMOVE DARK FILTER */
-.hero::before {
-  content: none;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 1;
+.magician-hero {
+  background: white;
+  color: var(--dark);
+  border-bottom: 4px solid var(--accent);
 }
 
 .hero h1 {
-  font-size: 48px;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
+  font-size: 2.2rem;
 }
 
 .role {
-  margin-top: 10px;
-  font-size: 18px;
-  letter-spacing: 3px;
+  margin: 20px 0 30px;
+  letter-spacing: 0.25em;
 }
 
-.hero-buttons {
-  margin-top: 30px;
-}
+/* ================= BUTTONS ================= */
 
 .btn {
   display: inline-block;
-  padding: 12px 28px;
-  margin: 0 10px;
-  border: 2px solid white;
-  color: white;
+  padding: 12px 32px;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
   transition: 0.3s ease;
+  margin: 0 10px;
 }
 
-.btn:hover {
+.btn-outline-light {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-outline-light:hover {
   background: white;
-  color: black;
+  color: var(--navy);
 }
 
-/* SECTIONS */
+.btn-outline-accent {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline-accent:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+
+.btn-outline-dark:hover {
+  background: var(--dark);
+  color: white;
+}
+
+/* ================= SECTIONS ================= */
 
 .section {
-  padding: 80px 20px;
-  max-width: 900px;
+  padding: 120px 40px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+  scroll-margin-top: 120px;
+}
+
+.page--actor .section {
+  background: linear-gradient(135deg, var(--navy), var(--metal));
+  color: white;
+}
+
+.page--magician .section {
+  background: white;
+  color: var(--dark);
 }
 
 .section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
+  margin-bottom: 40px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
-.section p {
-  margin-bottom: 20px;
+/* ================= BIO LAYOUT ================= */
+
+.bio-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
 }
 
-/* VIDEO */
+.bio-text {
+  flex: 2;
+}
+
+.bio-image {
+  flex: 1;
+}
+
+.bio-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* CV buttons */
+
+.cv-buttons a {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.cv-buttons a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ================= VIDEO ================= */
 
 .video-wrapper {
-  max-width: 800px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .video-wrapper iframe {
+  position: absolute;
   width: 100%;
-  height: 450px;
-  border: none;
+  height: 100%;
 }
 
-/* CONTACT LINK */
+/* ================= GRID ================= */
 
-.section a {
-  color: #0f2c44;
-  text-decoration: none;
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.section a:hover {
-  text-decoration: underline;
+.grid img {
+  width: calc(33.333% - 14px);
+  border-radius: 4px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
+@media (max-width: 900px) {
+  .bio-wrapper {
+    flex-direction: column;
   }
 
-  .btn {
-    display: block;
-    margin: 10px auto;
+  .grid img {
+    width: calc(50% - 10px);
   }
+}
 
-  .video-wrapper iframe {
-    height: 250px;
+@media (max-width: 500px) {
+  .grid img {
+    width: 100%;
   }
 }
