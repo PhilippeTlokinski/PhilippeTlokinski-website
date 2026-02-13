@@ -6,7 +6,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-  
+
+<body class="page page--actor">
+
+<header class="topbar">
+  <div class="topbar-left">
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">IMDb</a>
+    <a href="#">LinkedIn</a>
+  </div>
+
+  <nav class="topbar-nav">
+    <a href="#biography">Actor</a>
+    <a href="#showreel">Showreel</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#news">News</a>
+    <a href="#representation">Representation</a>
+    <a href="#contact">Contact</a>
+    <a href="/magician/" class="switch">Magician</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero actor-hero">
+  <div class="hero-inner">
+    <h1>Philippe Tłokiński</h1>
+    <p class="role">Actor · Magician</p>
+
+    <div class="hero-buttons">
+      <a href="#biography" class="btn btn-outline-light">Actor</a>
+      <a href="/magician/" class="btn btn-outline-accent">Magician</a>
+    </div>
+  </div>
+</section>
+
+<!-- BIOGRAPHY -->
+
+<section class="section" id="biography">
+  <h2>Biography</h2>
+
+  <div class="bio-wrapper">
+    <div class="bio-text">
+      <p>
+        Philippe Tłokiński is an actor working in film, television and theatre.
+        Born in France of Polish descent and raised in Switzerland,
+        he graduated from the National School of Dramatic Art of Saint-Étienne.
+      </p>
+
+      <p>
+        He has collaborated with Ludovic Lagarde, Séverine Chavrier,
+        Yves-Noël Genod, Hervé Loichemol, Joan Mompart and Ivan Vyrypaev.
+      </p>
+
+      <div class="cv-buttons">
+        <a href="#">View Screen CV</a>
+        <a href="#">View Stage CV</a>
+      </div>
+    </div>
+
+    <div class="bio-image">
+      <img src="/assets/images/headshot.jpg" alt="Philippe Tłokiński headshot">
+    </div>
+  </div>
+</section>
+
+<!-- SHOWREEL -->
+
+<section class="section" id="showreel">
+  <h2>Showreel</h2>
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/XVaE7ndLrhM"
+      title="Showreel Philippe Tłokiński"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+  <h2>Gallery</h2>
+  <div class="grid">
+    <img src="/assets/images/gallery1.jpg" alt="">
+    <img src="/assets/images/gallery2.jpg" alt="">
+    <img src="/assets/images/gallery3.jpg" alt="">
+  </div>
+</section>
+
+<!-- NEWS -->
+
+<section class="section" id="news">
+  <h2>News</h2>
+  <p>Currently appearing in <em>Ferdydurke</em> at Och-Teatr in Warsaw.</p>
+</section>
+
+<!-- REPRESENTATION -->
+
+<section class="section" id="representation">
+  <h2>Representation</h2>
+  <ul class="representation-list">
+    <li>🇵🇱 Poland — St-Gama</li>
+    <li>🇬🇧 UK — Stevenson Withers</li>
+    <li>🇺🇸 USA — Agency Name</li>
+    <li>🇫🇷 France — Agence Martine Lapertot</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: 
+    <a href="mailto:contact@philippetlokinski.com">
+      contact@philippetlokinski.com
+    </a>
+  </p>
+</section>
+
+<!-- IMAGE LIGHTBOX SCRIPT (Moved to bottom for stability) -->
+
 <script>
 document.querySelectorAll('.bio-image img, .grid img').forEach(img => {
   img.addEventListener('click', function () {
@@ -35,111 +157,6 @@ document.querySelectorAll('.bio-image img, .grid img').forEach(img => {
   });
 });
 </script>
-  
-<body class="page page--actor">
-
-<header class="topbar">
-  <div class="topbar-left">
-    <a href="#">Twitter</a>
-    <a href="#">Instagram</a>
-    <a href="#">Facebook</a>
-    <a href="#">IMDb</a>
-    <a href="#">LinkedIn</a>
-  </div>
-
-  <nav class="topbar-nav">
-    <a href="#biography">Actor</a>
-    <a href="#showreel">Showreel</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#news">News</a>
-    <a href="#representation">Representation</a>
-    <a href="#contact">Contact</a>
-    <a href="/magician/" class="switch">Magician</a>
-  </nav>
-</header>
-
-<section class="hero actor-hero">
-  <div class="hero-inner">
-    <h1>Philippe Tłokiński</h1>
-    <p class="role">Actor · Magician</p>
-
-    <div class="hero-buttons">
-      <a href="#biography" class="btn btn-outline-light">Actor</a>
-      <a href="/magician/" class="btn btn-outline-accent">Magician</a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="biography">
-  <div class="biography-inner">
-    <h2>Biography</h2>
-
-  <div class="bio-wrapper">
-    <div class="bio-text">
-      <p>
-        Philippe Tłokiński is an actor working in film, television and theatre.
-        Born in France of Polish descent and raised in Switzerland,
-        he graduated from the National School of Dramatic Art of Saint-Étienne.
-      </p>
-
-      <p>
-        He has collaborated with Ludovic Lagarde, Séverine Chavrier,
-        Yves-Noël Genod, Hervé Loichemol, Joan Mompart and Ivan Vyrypaev.
-      </p>
-
-      <div class="cv-buttons">
-        <a href="#">View Screen CV</a>
-        <a href="#">View Stage CV</a>
-      </div>
-    </div>
-
-    <div class="bio-image">
-      <img src="/assets/images/headshot.jpg" alt="Philippe Tłokiński headshot">
-    </div>
-  </div>
-</section>
-
-<section class="section" id="showreel">
-  <h2>Showreel</h2>
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/XVaE7ndLrhM"
-      title="Showreel Philippe Tłokiński"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<section class="section" id="gallery">
-  <h2>Gallery</h2>
-  <div class="grid">
-    <img src="/assets/images/gallery1.jpg" alt="">
-    <img src="/assets/images/gallery2.jpg" alt="">
-    <img src="/assets/images/gallery3.jpg" alt="">
-  </div>
-</section>
-
-<section class="section" id="news">
-  <div class="news-inner">
-    <h2>News</h2>
-  <p>Currently appearing in *Ferdydurke* at Och-Teatr in Warsaw.</p>
-</section>
-
-<section class="section" id="representation">
-  <div class="representation-inner">
-    <h2>Representation</h2>
-  <ul class="representation-list">
-    <li>🇵🇱 Poland — St-Gama</li>
-    <li>🇬🇧 UK — Stevenson Withers</li>
-    <li>🇺🇸 USA — Agency Name</li>
-    <li>🇫🇷 France — Agence Martine Lapertot</li>
-  </ul>
-</section>
-
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:contact@philippetlokinski.com">contact@philippetlokinski.com</a></p>
-</section>
 
 </body>
 </html>
