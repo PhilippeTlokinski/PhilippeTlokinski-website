@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
 :root {
-  --dark: #1f2933;
-  --navy: #1c2733;
-  --metal: #3a3f45;
-  --light: #ffffff;
-  --accent: #b11226;
+  --navy: #0e1a2b;
+  --gold: #c6a85a;
+  --light: #f4f4f4;
+  --dark: #111;
 }
 
 * {
@@ -14,207 +11,103 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 
-/* ================= TOPBAR ================= */
-
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
-
-.page--actor .topbar {
-  background: var(--navy);
-}
-
-.page--magician .topbar {
-  background: white;
-  border-bottom: 1px solid #eee;
-}
-
-.topbar a {
-  text-decoration: none;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  margin-left: 25px;
-}
-
-.page--actor .topbar a {
+.page--actor {
+  background: linear-gradient(135deg, #0e1a2b, #1a2e4a);
   color: white;
 }
 
-.page--magician .topbar a {
-  color: var(--dark);
+.page--magician {
+  background: #ffffff;
+  color: #111;
 }
 
-/* ================= HERO ================= */
+/* ---------- NAVIGATION ---------- */
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  z-index: 1000;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 25px;
+  color: inherit;
+}
+
+/* ---------- HERO ---------- */
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px 40px 80px;
+  padding: 0 20px;
 }
 
-.actor-hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("/assets/images/actor-hero.jpg") center/cover no-repeat;
-  color: white;
+.hero-content h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
 }
 
-.magician-hero {
-  background: white;
-  color: var(--dark);
-  border-bottom: 4px solid var(--accent);
+.hero-content p {
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-.hero h1 {
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  font-size: 2.2rem;
+.hero-buttons {
+  margin-top: 40px;
 }
 
-.role {
-  margin: 20px 0 30px;
-  letter-spacing: 0.25em;
-}
-
-/* ================= BUTTONS ================= */
-
-.btn {
+.hero-buttons a {
   display: inline-block;
-  padding: 12px 32px;
-  text-decoration: none;
-  letter-spacing: 0.2em;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  transition: 0.3s ease;
+  padding: 12px 30px;
   margin: 0 10px;
+  border: 2px solid currentColor;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-.btn-outline-light {
-  border: 1px solid white;
-  color: white;
+.hero-buttons a:hover {
+  background: currentColor;
+  color: #000;
 }
 
-.btn-outline-light:hover {
-  background: white;
-  color: var(--navy);
-}
-
-.btn-outline-accent {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-outline-accent:hover {
-  background: var(--accent);
-  color: white;
-}
-
-.btn-outline-dark {
-  border: 1px solid var(--dark);
-  color: var(--dark);
-}
-
-.btn-outline-dark:hover {
-  background: var(--dark);
-  color: white;
-}
-
-/* ================= SECTIONS ================= */
+/* ---------- SECTIONS ---------- */
 
 .section {
-  padding: 120px 0;
-  scroll-margin-top: 120px;
-}
-.section-inner {
-  max-width: 1100px;
+  padding: 120px 40px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 40px;
-}
-
-.page--actor .section {
-  background: linear-gradient(135deg, var(--navy), var(--metal));
-  color: white;
-}
-
-.page--magician .section {
-  background: white;
-  color: var(--dark);
 }
 
 .section h2 {
   margin-bottom: 40px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
-/* ================= BIO LAYOUT ================= */
-
-.bio-wrapper {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.bio-text {
-  flex: 2;
-}
-
-.bio-image {
-  flex: 1;
-}
-
-.bio-image img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-/* CV buttons */
-
-.cv-buttons a {
-  display: inline-block;
-  margin-right: 20px;
-  margin-top: 20px;
-  padding: 12px 28px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  transition: 0.3s ease;
-}
-
-.cv-buttons a:hover {
-  background: var(--accent);
-  color: white;
-}
-
-/* ================= VIDEO ================= */
+/* ---------- VIDEO ---------- */
 
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -224,33 +117,38 @@ body {
   height: 100%;
 }
 
-/* ================= GRID ================= */
+/* ---------- GALLERY ---------- */
 
-.grid {
+.gallery {
   display: flex;
   gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.grid img {
-  width: calc(33.333% - 14px);
-  border-radius: 4px;
+.gallery img {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-  .bio-wrapper {
-    flex-direction: column;
-  }
-
-  .grid img {
-    width: calc(50% - 10px);
-  }
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
-@media (max-width: 500px) {
-  .grid img {
-    width: 100%;
-  }
+/* ---------- BIO IMAGE ---------- */
+
+.bio-img {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 40px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 0.9rem;
 }
