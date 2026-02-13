@@ -2,16 +2,16 @@
 
 :root {
   --dark: #1f2933;
-  --navy: #243447;
+  --navy: #1c2733;
   --metal: #3a3f45;
   --light: #ffffff;
   --accent: #b11226;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -21,92 +21,139 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background: var(--light);
-  color: var(--dark);
 }
 
-/* =========================================================
-   PAGE WRAPPER
-========================================================= */
-
-.page {
-  min-height: 100vh;
-}
-
-/* =========================================================
-   TOPBAR
-========================================================= */
+/* ================= TOPBAR ================= */
 
 .topbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: var(--navy);
-  color: white;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
   z-index: 1000;
 }
 
-.logo {
-  text-decoration: none;
-  color: white;
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
+.page--actor .topbar {
+  background: var(--navy);
 }
 
-nav a {
-  margin-left: 30px;
+.page--magician .topbar {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.topbar a {
   text-decoration: none;
-  color: white;
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  transition: opacity 0.3s ease;
+  letter-spacing: 0.15em;
+  margin-left: 25px;
 }
 
-nav a:hover {
-  opacity: 0.7;
+.page--actor .topbar a {
+  color: white;
 }
 
-/* Push content below fixed navbar */
-
-main {
-  padding-top: 100px;
+.page--magician .topbar a {
+  color: var(--dark);
 }
 
-/* =========================================================
-   HERO
-========================================================= */
+/* ================= HERO ================= */
 
 .hero {
-  padding: 140px 40px 100px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 140px 40px 80px;
+}
+
+.actor-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("/assets/images/actor-hero.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.magician-hero {
+  background: white;
+  color: var(--dark);
+  border-bottom: 4px solid var(--accent);
 }
 
 .hero h1 {
   font-weight: 300;
   letter-spacing: 0.1em;
+  font-size: 2.2rem;
 }
 
-.hero .role {
-  margin: 15px 0 30px;
+.role {
+  margin: 20px 0 30px;
+  letter-spacing: 0.25em;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  text-decoration: none;
   letter-spacing: 0.2em;
-  font-size: 1rem;
-  opacity: 0.8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  margin: 0 10px;
 }
 
-/* =========================================================
-   SECTIONS
-========================================================= */
+.btn-outline-light {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: var(--navy);
+}
+
+.btn-outline-accent {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline-accent:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+
+.btn-outline-dark:hover {
+  background: var(--dark);
+  color: white;
+}
+
+/* ================= SECTIONS ================= */
 
 .section {
-  padding: 100px 40px;
+  padding: 120px 40px;
   max-width: 1100px;
   margin: 0 auto;
   scroll-margin-top: 120px;
+}
+
+.page--actor .section {
+  background: linear-gradient(135deg, var(--navy), var(--metal));
+  color: white;
+}
+
+.page--magician .section {
+  background: white;
+  color: var(--dark);
 }
 
 .section h2 {
@@ -116,9 +163,7 @@ main {
   font-size: 0.9rem;
 }
 
-/* =========================================================
-   ACTOR BIO LAYOUT (TEXT LEFT, IMAGE RIGHT)
-========================================================= */
+/* ================= BIO LAYOUT ================= */
 
 .bio-wrapper {
   display: flex;
@@ -130,10 +175,6 @@ main {
   flex: 2;
 }
 
-.bio-text p {
-  margin-bottom: 20px;
-}
-
 .bio-image {
   flex: 1;
 }
@@ -143,15 +184,12 @@ main {
   border-radius: 6px;
 }
 
-/* CV Buttons */
-
-.cv-buttons {
-  margin-top: 30px;
-}
+/* CV buttons */
 
 .cv-buttons a {
   display: inline-block;
   margin-right: 20px;
+  margin-top: 20px;
   padding: 12px 28px;
   border: 1px solid var(--accent);
   color: var(--accent);
@@ -167,62 +205,38 @@ main {
   color: white;
 }
 
-/* =========================================================
-   SHOWREEL (CENTERED)
-========================================================= */
+/* ================= VIDEO ================= */
 
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
-  overflow: hidden;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .video-wrapper iframe {
   position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
 }
 
-/* =========================================================
-   MEDIA GRID
-========================================================= */
+/* ================= GRID ================= */
 
 .grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .grid img {
   width: calc(33.333% - 14px);
-  object-fit: cover;
   border-radius: 4px;
 }
 
-/* =========================================================
-   REPRESENTATION
-========================================================= */
-
-.representation ul {
-  list-style: none;
-}
-
-.representation li {
-  margin-bottom: 10px;
-  letter-spacing: 0.05em;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-
   .bio-wrapper {
     flex-direction: column;
   }
@@ -230,21 +244,10 @@ main {
   .grid img {
     width: calc(50% - 10px);
   }
-
 }
 
 @media (max-width: 500px) {
-
   .grid img {
     width: 100%;
   }
-
-  .topbar {
-    padding: 20px 30px;
-  }
-
-  nav a {
-    margin-left: 15px;
-  }
-
 }
