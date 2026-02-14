@@ -72,8 +72,8 @@ body {
 }
 
 .actor-hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("/assets/images/actor-hero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+              url("/assets/images/actor-hero.jpg") center 30% / cover no-repeat;
   color: white;
 }
 
