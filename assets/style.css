@@ -257,3 +257,29 @@ body {
     width: 100%;
   }
 }
+
+.site-note {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+.site-note__icon {
+  font-size: 20px;
+}
+
+.site-note__text {
+  white-space: nowrap;
+}
