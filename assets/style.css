@@ -262,6 +262,14 @@ body {
   }
 }
 
+.page--actor a{
+  color: white;
+}
+
+.page--actor a:hover {
+  opacity: 0.8;
+}
+
 .site-note {
   position: fixed;
   top: 30%;
