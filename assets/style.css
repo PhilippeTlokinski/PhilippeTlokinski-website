@@ -190,6 +190,10 @@ body {
   border-radius: 6px;
 }
 
+.bio-text p {
+  max-width: 480px;
+}
+
 /* CV buttons */
 
 .cv-buttons a {
