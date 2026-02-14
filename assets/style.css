@@ -139,11 +139,17 @@ body {
 
 /* ================= SECTIONS ================= */
 
+/* FULL WIDTH BACKGROUND */
 .section {
-  padding: 120px 40px;
+  padding: 120px 0;
+  scroll-margin-top: 120px;
+}
+
+/* CENTERED CONTENT INSIDE SECTION */
+.section-inner {
   max-width: 1100px;
   margin: 0 auto;
-  scroll-margin-top: 120px;
+  padding: 0 40px;
 }
 
 .page--actor .section {
