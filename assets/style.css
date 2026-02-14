@@ -236,13 +236,12 @@ body {
 .grid {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  flex-wrap: wrap;
 }
 
 .grid img {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
+  width: calc(33.333% - 14px);
+  border-radius: 4px;
 }
 
 /* ================= RESPONSIVE ================= */
