@@ -46,114 +46,140 @@
 <!-- BIOGRAPHY -->
 
 <section class="section" id="biography">
-  <h2>Biography</h2>
+  <div class="section-inner">
 
-  <div class="bio-wrapper">
-    <div class="bio-text">
-      <p>
-        Philippe Tłokiński is an actor working in film, television and theatre.
-        Born in France of Polish descent and raised in Switzerland,
-        he graduated from the National School of Dramatic Art of Saint-Étienne.
-      </p>
+    <h2>Biography</h2>
 
-      <p>
-        He has collaborated with Ludovic Lagarde, Séverine Chavrier,
-        Yves-Noël Genod, Hervé Loichemol, Joan Mompart and Ivan Vyrypaev.
-      </p>
+    <div class="bio-wrapper">
+      <div class="bio-text">
+        <p>
+          Philippe Tłokiński is an actor working in film, television and theatre.
+          Born in France of Polish descent and raised in Switzerland,
+          he graduated from the National School of Dramatic Art of Saint-Étienne.
+        </p>
 
-      <div class="cv-buttons">
-        <a href="#">View Screen CV</a>
-        <a href="#">View Stage CV</a>
+        <p>
+          He has collaborated with Ludovic Lagarde, Séverine Chavrier,
+          Yves-Noël Genod, Hervé Loichemol, Joan Mompart and Ivan Vyrypaev.
+        </p>
+
+        <div class="cv-buttons">
+          <a href="#">View Screen CV</a>
+          <a href="#">View Stage CV</a>
+        </div>
+      </div>
+
+      <div class="bio-image">
+        <img src="/assets/images/headshot1.jpg" alt="Philippe Tłokiński headshot">
       </div>
     </div>
 
-    <div class="bio-image">
-      <img src="/assets/images/headshot1.jpg" alt="Philippe Tłokiński headshot">
-    </div>
   </div>
 </section>
 
 <!-- SHOWREEL -->
 
 <section class="section" id="showreel">
-  <h2>Showreel</h2>
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/XVaE7ndLrhM"
-      title="Showreel Philippe Tłokiński"
-      allowfullscreen>
-    </iframe>
+  <div class="section-inner">
+
+    <h2>Showreel</h2>
+
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/XVaE7ndLrhM"
+        title="Showreel Philippe Tłokiński"
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 </section>
 
 <!-- GALLERY -->
 
 <section class="section" id="gallery">
-  <h2>Gallery</h2>
-  <div class="grid">
-    <img src="/assets/images/headshot2.jpg" alt="">
-    <img src="/assets/images/headshot3.jpg" alt="">
-    <img src="/assets/images/gallery1.jpg" alt="">
+  <div class="section-inner">
+
+    <h2>Gallery</h2>
+
+    <div class="grid">
+      <img src="/assets/images/headshot2.jpg" alt="">
+      <img src="/assets/images/headshot3.jpg" alt="">
+      <img src="/assets/images/gallery1.jpg" alt="">
+    </div>
+
   </div>
 </section>
 
 <!-- NEWS -->
 
 <section class="section" id="news">
-  <h2>News</h2>
-  <p>Currently appearing in <em>Ferdydurke</em> at Och-Teatr in Warsaw.</p>
+  <div class="section-inner">
+
+    <h2>News</h2>
+    <p>Currently appearing in <em>Ferdydurke</em> at Och-Teatr in Warsaw.</p>
+
+  </div>
 </section>
 
 <!-- REPRESENTATION -->
 
 <section class="section" id="representation">
-  <h2>Representation</h2>
-  <ul class="representation-list">
-    <li>🇵🇱 Poland — St-Gama</li>
-    <li>🇬🇧 UK — Stevenson Withers</li>
-    <li>🇺🇸 USA — Agency Name</li>
-    <li>🇫🇷 France — Agence Martine Lapertot</li>
-  </ul>
+  <div class="section-inner">
+
+    <h2>Representation</h2>
+
+    <ul class="representation-list">
+      <li>🇵🇱 Poland — St-Gama</li>
+      <li>🇬🇧 UK — Stevenson Withers</li>
+      <li>🇺🇸 USA — Agency Name</li>
+      <li>🇫🇷 France — Agence Martine Lapertot</li>
+    </ul>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
 
 <section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>Email: 
-    <a href="mailto:contact@philippetlokinski.com">
-      contact@philippetlokinski.com
-    </a>
-  </p>
+  <div class="section-inner">
+
+    <h2>Contact</h2>
+
+    <p>Email:
+      <a href="mailto:contact@philippetlokinski.com">
+        contact@philippetlokinski.com
+      </a>
+    </p>
+
+  </div>
 </section>
 
-<!-- IMAGE LIGHTBOX SCRIPT (Moved to bottom for stability) -->
+<!-- IMAGE LIGHTBOX SCRIPT -->
 
 <script>
-document.querySelectorAll('.bio-image img, .grid img').forEach(img => {
-  img.addEventListener('click', function () {
-    const overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
-    overlay.style.inset = '0';
-    overlay.style.background = 'rgba(0,0,0,0.85)';
-    overlay.style.display = 'flex';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.zIndex = '2000';
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.bio-image img, .grid img').forEach(img => {
+    img.addEventListener('click', function () {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.background = 'rgba(0,0,0,0.85)';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.zIndex = '2000';
 
-    const fullImg = document.createElement('img');
-    fullImg.src = this.src;
-    fullImg.style.maxWidth = '90%';
-    fullImg.style.maxHeight = '90%';
-    fullImg.style.borderRadius = '6px';
+      const fullImg = document.createElement('img');
+      fullImg.src = this.src;
+      fullImg.style.maxWidth = '90%';
+      fullImg.style.maxHeight = '90%';
+      fullImg.style.borderRadius = '6px';
 
-    overlay.appendChild(fullImg);
-
-    overlay.addEventListener('click', () => {
-      document.body.removeChild(overlay);
+      overlay.appendChild(fullImg);
+      overlay.addEventListener('click', () => document.body.removeChild(overlay));
+      document.body.appendChild(overlay);
     });
-
-    document.body.appendChild(overlay);
   });
 });
 </script>
