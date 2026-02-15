@@ -6,6 +6,8 @@
   --metal: #3a3f45;
   --light: #ffffff;
   --accent: #b11226;
+
+  --topbar-height: 70px;
 }
 
 * {
