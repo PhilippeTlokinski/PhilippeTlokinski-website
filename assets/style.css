@@ -72,14 +72,12 @@ body {
 }
 
 .actor-hero {
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-              url("/assets/images/actor-hero.jpg") center 30% / cover no-repeat;
+  background: url("/assets/images/actor-hero.jpg") center 30% / cover no-repeat;
   color: white;
 }
 
 .magician-hero {
-  background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-              url("/assets/images/magician-hero.jpg") center 30% / cover no-repeat;
+  background: url("/assets/images/magician-hero.jpg") center 30% / cover no-repeat;
   color: var(--dark);
   border-bottom: 4px solid var(--accent);
 }
