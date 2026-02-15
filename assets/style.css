@@ -78,6 +78,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 40px;
+  position: relative;
 }
 
 .actor-hero {
@@ -91,12 +92,6 @@ body {
   border-bottom: 4px solid var(--accent);
 }
 
-.hero h1,
-.hero .role,
-.hero p {
-  color: white;
-}
-
 .hero h1 {
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -108,46 +103,43 @@ body {
   letter-spacing: 0.25em;
 }
 
-/* ================= BUTTONS ================= */
+/* ================= HERO BUTTONS / ROLE SWITCH ================= */
 
-.btn {
-  display: inline-block;
-  padding: 12px 32px;
-  text-decoration: none;
-  letter-spacing: 0.2em;
+.hero-buttons {
+  display: inline-flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.hero-buttons .btn {
+  padding: 8px 18px;
   font-size: 0.75rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  transition: 0.3s ease;
-  margin: 0 10px;
+  text-decoration: none;
+  border: 1px solid;
+  transition: all 0.3s ease;
 }
 
-.btn-outline-light {
-  border: 1px solid white;
+/* Actor button */
+.hero-buttons .btn-outline-light {
+  border-color: white;
   color: white;
 }
 
-.btn-outline-light:hover {
+.hero-buttons .btn-outline-light:hover {
   background: white;
-  color: var(--navy);
-}
-
-.btn-outline-accent {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-outline-accent:hover {
-  background: var(--accent);
-  color: white;
-}
-
-.btn-outline-dark {
-  border: 1px solid var(--dark);
   color: var(--dark);
 }
 
-.btn-outline-dark:hover {
-  background: var(--dark);
+/* Magician button */
+.hero-buttons .btn-outline-accent {
+  border-color: var(--accent);
+  color: white;
+}
+
+.hero-buttons .btn-outline-accent:hover {
+  background: var(--accent);
   color: white;
 }
 
@@ -321,14 +313,6 @@ body {
   .grid img {
     width: 100%;
   }
-}
-
-.page--actor a {
-  color: white;
-}
-
-.page--actor a:hover {
-  opacity: 0.8;
 }
 
 /* ================= SITE NOTE ================= */
