@@ -84,3 +84,317 @@ body {
   background: url("/assets/images/actor-hero.jpg") center 30% / cover no-repeat;
   color: white;
 }
+
+.magician-hero {
+  background: url("/assets/images/magician-hero.jpg") center 30% / cover no-repeat;
+  color: white;
+  border-bottom: 4px solid var(--accent);
+}
+
+.hero h1 {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  font-size: 2.2rem;
+}
+
+.role {
+  margin: 20px 0 30px;
+  letter-spacing: 0.25em;
+}
+
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons {
+  display: inline-flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.role-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  border: 2px solid;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.role-btn--actor {
+  color: white;
+  border-color: white;
+}
+
+.role-btn--actor:hover {
+  background: white;
+  color: var(--dark);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.role-btn--magician {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.role-btn--magician:hover {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  margin: 0 10px;
+}
+
+.btn-outline-light {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: var(--navy);
+}
+
+.btn-outline-accent {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline-accent:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+
+.btn-outline-dark:hover {
+  background: var(--dark);
+  color: white;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 120px 0;
+  scroll-margin-top: calc(var(--topbar-height) + 20px);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page--actor .section {
+  background: linear-gradient(135deg, var(--navy), var(--metal));
+  color: white;
+}
+
+.page--magician .section {
+  background: white;
+  color: var(--dark);
+}
+
+.section h2 {
+  margin-bottom: 40px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* ================= BIO LAYOUT ================= */
+
+.bio-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.bio-image {
+  flex: 1.1;
+}
+
+.bio-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.bio-text p {
+  max-width: 480px;
+}
+
+/* ================= CV BUTTONS ================= */
+
+.cv-buttons a {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.cv-buttons a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ================= VIDEO ================= */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grid img {
+  width: calc(33.333% - 14px);
+  border-radius: 4px;
+}
+
+/* ================= REPRESENTATION ================= */
+
+.representation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.rep-card {
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  transition: all 0.3s ease;
+}
+
+.rep-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.rep-card h3 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.rep-card .agency {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.rep-card p {
+  margin: 0.4rem 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.rep-card a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: opacity 0.3s ease;
+}
+
+.rep-card a:hover {
+  opacity: 0.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .bio-wrapper {
+    flex-direction: column;
+  }
+
+  .grid img {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid img {
+    width: 100%;
+  }
+}
+
+.page--actor a {
+  color: white;
+}
+
+.page--actor a:hover {
+  opacity: 0.8;
+}
+
+/* ================= SITE NOTE ================= */
+
+.site-note {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+.site-note__icon {
+  font-size: 20px;
+}
+
+.site-note__text {
+  white-space: nowrap;
+}
