@@ -87,8 +87,14 @@ body {
 
 .magician-hero {
   background: url("/assets/images/magician-hero.jpg") center 30% / cover no-repeat;
-  color: var(--dark);
+  color: white;
   border-bottom: 4px solid var(--accent);
+}
+
+.hero h1,
+.hero .role,
+.hero p {
+  color: white;
 }
 
 .hero h1 {
