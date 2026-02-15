@@ -160,5 +160,32 @@
   </div>
 </section>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.bio-image img, .grid img').forEach(img => {
+    img.addEventListener('click', function () {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.background = 'rgba(0,0,0,0.85)';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.zIndex = '2000';
+
+      const fullImg = document.createElement('img');
+      fullImg.src = this.src;
+      fullImg.style.maxWidth = '90%';
+      fullImg.style.maxHeight = '90%';
+      fullImg.style.borderRadius = '6px';
+
+      overlay.appendChild(fullImg);
+      overlay.addEventListener('click', () => document.body.removeChild(overlay));
+      document.body.appendChild(overlay);
+    });
+  });
+});
+</script>
+
 </body>
 </html>
