@@ -410,3 +410,21 @@ body {
   height: 1px;
   background: currentColor;
 }
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px);
+  opacity: 0.6;
+}
