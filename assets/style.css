@@ -363,10 +363,16 @@ body {
   }
 }
 
-.page--actor a {
+/* ================= ACTOR LINK FIX ================= */
+
+.page--actor .topbar a,
+.page--actor .section a,
+.page--actor footer a {
   color: white;
 }
 
-.page--actor a:hover {
+.page--actor .topbar a:hover,
+.page--actor .section a:hover,
+.page--actor footer a:hover {
   opacity: 0.8;
 }
