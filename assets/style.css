@@ -137,7 +137,7 @@ body {
 }
 
 .role-btn--magician {
-  color: var(--accent);
+  color: white;
   border-color: var(--accent);
 }
 
